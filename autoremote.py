@@ -21,7 +21,7 @@ ipdata = ipres.read()
 publicip=ipdata
 
 def autoremote_reg():
-	req=urllib2.Request('http://autoremotejoaomgcd.appspot.com/registerpc?key={0}&name={1}&id=homepi&type=linux&publicip={2}&localip={3}&id={4}'.format(key,name,publicip,localip,name))
+	req=urllib2.Request('http://autoremotejoaomgcd.appspot.com/registerpc?key={0}&name={1}&type=linux&publicip={2}&localip={3}&id={4}'.format(key,name,publicip,localip,name))
 	res=urllib2.urlopen(req)
 	data=res.read()
 
