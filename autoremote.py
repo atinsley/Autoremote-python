@@ -21,13 +21,13 @@ ipdata = ipres.read()
 publicip=ipdata
 
 def autoremote_reg():
-	req=urllib2.Request('http://autoremotejoaomgcd.appspot.com/registerpc?key={0}&name={1}&type=linux&publicip={2}&localip={3}&id={4}'.format(key,name,publicip,localip,name))
+	req=urllib2.Request('http://autoremotejoaomgcd.appspot.com/registerpc?key={0}&name={1}&publicip={2}&localip={3}&id={4}'.format(key,name,publicip,localip,name))
 	res=urllib2.urlopen(req)
 	data=res.read()
 
 def autoremote_send(message):
 	message = urllib.quote_plus(message)
-	req=urllib2.Request('https://autoremotejoaomgcd.appspot.com/sendmessage?key={0}&message={1}&sender={3}'.format(key,message,name))
+	req=urllib2.Request('https://autoremotejoaomgcd.appspot.com/sendmessage?key={0}&message={1}&sender={2}'.format(key,message,name))
 	res=urllib2.urlopen(req)
 	data=res.read()
 
